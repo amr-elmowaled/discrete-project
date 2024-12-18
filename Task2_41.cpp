@@ -10,15 +10,11 @@
 
 
 using namespace std;
-  
- 
-// g++ -std=c++17 main.cpp -o main && ./main
-
 
 //////////
 
-string expr = "a|~a|b|~b"; // example expression 
-string simplified_expr = "a|~a"; // simplified expression
+string expr = "((C|B)&(C|A))&((B|~C)&(A|~C))"; // example expression 
+string simplified_expr = "A&B"; // simplified expression
 
 //////////
 
@@ -320,7 +316,7 @@ void step1() {
     cout << "\nsimplified logic Expression: " << simplified_expr << endl;
     simplified.printTruthTable();
 
-    if(expression == simplified) cout << "* the two expressions are equivalent. \n\n";
+    if(expression == simplified) cout << "* the two expressions ARE equivalent. \n\n";
     else cout << "* the two expressions are NOT equivalent.\n\n";
     
 }
