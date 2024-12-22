@@ -53,7 +53,7 @@ if both expressions have no shared variables:
     they are not equivalent
 
 align the common variables over the least significant bits of the ascendingly ordered truth table
-of both expressions
+for each expression
 
 for each expression:
   if the expression has more variables than the shared variables between both expressions
