@@ -44,7 +44,7 @@ a | b | c | Expr
 
 using this fact, we can know whether two expressions are equivalent or not:
 ```
-if both expressions has no shared variables:
+if both expressions have no shared variables:
   if both of them being equally either tautology or unsatisfiable:
     then they are equivalent
   else:
