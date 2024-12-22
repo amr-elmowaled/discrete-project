@@ -45,7 +45,7 @@ a | b | c | Expr
 using this fact, we can know whether two expressions are equivalent or not:
 ```
 if both expressions have no shared variables:
-  if both of them being equally either tautology or unsatisfiable:
+  if both of them are equally either tautology or unsatisfiable:
     then they are equivalent
   else:
     they are not equivalent
@@ -55,13 +55,13 @@ for each expression:
   and any of the unshared variables is not redundant:
     then they are not equivalent
 
-finally, if they share variables and all the unshared variables are redundant:
-  make the shared variables occupy the least significant bits in the truth table
+if they share variables and all the unshared variables are redundant:
+  make the shared variables occupy the least significant bits in the ascendingly ordered truth table
   for every output of all rows from 1 to 2^(number of shared variables):
     if output of expression A != output of expression B:
       they are not equivalent
 
-if they are not shown unequivalent so far:
+finally, if they are not shown unequivalent thus far:
   then they are equivalent
 
 ```
