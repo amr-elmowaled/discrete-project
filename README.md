@@ -44,11 +44,16 @@ a | b | c | Expr
 
 using this fact, we can know whether two expressions are equivalent or not:
 ```
+extract common variables between two expressions.
+
 if both expressions have no shared variables:
   if both of them are equally either tautology or unsatisfiable:
     then they are equivalent
   else:
     they are not equivalent
+
+align the common variables over the least significant bits of the ascendingly ordered truth table
+of both expressions
 
 for each expression:
   if the expression has more variables than the shared variables between both expressions
@@ -56,7 +61,6 @@ for each expression:
     then they are not equivalent
 
 if they share variables and all the unshared variables are redundant:
-  make the shared variables occupy the least significant bits in the ascendingly ordered truth table
   for every output of all rows from 1 to 2^(number of shared variables):
     if output of expression A != output of expression B:
       they are not equivalent
